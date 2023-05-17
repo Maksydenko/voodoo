@@ -1,0 +1,8 @@
+@import "Header/Header.scss";
+@import "Footer/Footer.scss";
+
+main {
+  @include responsiveValue("margin-top", 194, 98);
+  @include responsiveValue("padding-top", 60, 24);
+  @include responsiveValue("padding-bottom", 26, 79);
+}

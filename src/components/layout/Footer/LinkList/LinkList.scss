@@ -1,0 +1,21 @@
+.link-list {
+  @apply uppercase;
+
+  // .link-list__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: em(19);
+    }
+  }
+
+  // .link-list__link
+
+  &__link {
+    transition: opacity 0.3s ease 0s;
+
+    &:hover {
+      @apply opacity-50;
+    }
+  }
+}

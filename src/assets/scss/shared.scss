@@ -1,0 +1,33 @@
+.button {
+  @apply font-semibold text-white rounded bg-black;
+  @include responsiveValue("font-size", 20, 14);
+  padding: rem(9) rem(12.5);
+  transition: opacity 0.3s ease 0s;
+
+  &:hover {
+    @apply opacity-50;
+  }
+
+  &_transparent {
+    @apply text-black bg-transparent;
+  }
+
+  &_uppercase {
+    @apply uppercase;
+  }
+
+  &_small {
+    @apply text-xs font-normal;
+    padding: em(2, 12) em(8.5, 12);
+  }
+
+  &_big {
+    @apply w-full text-base;
+  }
+
+  &_full-opacity {
+    &:hover {
+      @apply opacity-100;
+    }
+  }
+}

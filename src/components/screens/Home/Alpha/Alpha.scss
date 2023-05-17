@@ -1,0 +1,84 @@
+.alpha {
+  // .alpha__container
+
+  &__container {
+    @include responsiveValue("margin-bottom", 48, 50);
+  }
+
+  &__body {
+    @apply rounded;
+    color: $mainBg;
+    background-color: $mainColor;
+
+    > * {
+      padding: em(25, 14);
+    }
+
+    &_active {
+      .alpha__content {
+        @apply block;
+      }
+    }
+  }
+
+  // .alpha__button
+
+  &__button {
+    @apply flex justify-between items-center w-full;
+    gap: em(5);
+    padding: em(25, 14);
+    transition: opacity 0.3s ease 0s;
+
+    &:hover {
+      @apply opacity-50;
+    }
+  }
+
+  // .alpha__warning
+
+  &__main {
+    @apply flex items-center;
+    @include responsiveValue("gap", 48, 24);
+  }
+
+  &__title {
+    @apply flex items-center text-base font-bold uppercase;
+    width: em(80);
+    gap: em(7);
+  }
+
+  &__img {
+    flex: 0 0 em(22);
+    padding-bottom: em(22);
+
+    &._arrow {
+      @apply pb-2;
+      flex: 0 0 rem(14);
+    }
+  }
+
+  // .alpha__text
+
+  &__text {
+    @apply font-medium;
+
+    @media (max-width: $mobile) {
+      span {
+        @apply hidden;
+      }
+    }
+  }
+
+  // .alpha__content
+
+  &__content {
+    @apply hidden;
+    border-top: rem(1) solid $mainBg;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: em(20, 14);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "Form/Form.scss";
+
+.sign-up {
+  // .sign-up__container
+
+  &__container {
+    @apply text-center;
+    padding-top: rem(48);
+    padding-bottom: rem(48);
+  }
+
+  // .sign-up__title
+
+  &__title {
+    margin-bottom: rem(24);
+    @include responsiveValue("font-size", 20, 14);
+  }
+
+  // .sign-up__form
+
+  &__form {
+  }
+}

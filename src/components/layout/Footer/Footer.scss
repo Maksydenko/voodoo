@@ -1,0 +1,58 @@
+@import "LinkList/LinkList.scss";
+
+.footer {
+  @apply bg-white;
+
+  // .footer__container
+
+  &__container {
+    @apply flex items-start;
+    gap: em(23);
+    min-height: em(268);
+    padding-top: em(84);
+    padding-bottom: em(84);
+
+    @media (max-width: $tablet) {
+      @apply flex-col;
+      gap: em(48);
+      padding: em(48);
+    }
+
+    > * {
+      @media (min-width: $tablet) {
+        flex: 1 1 em(300);
+      }
+    }
+  }
+
+  // .footer__logo
+
+  &__logo {
+    padding: em(8) 0;
+
+    @media (max-width: $tablet) {
+      @apply order-last self-center;
+    }
+
+    a {
+      transition: opacity 0.3s ease 0s;
+
+      &:hover {
+        @apply opacity-50;
+      }
+    }
+  }
+
+  // .footer__img
+
+  &__img {
+    @apply m-auto;
+    @include responsiveValue("width", 82, 80);
+    @include responsiveValue("height", 82, 80);
+  }
+
+  // .footer__link-list
+
+  &__link-list {
+  }
+}

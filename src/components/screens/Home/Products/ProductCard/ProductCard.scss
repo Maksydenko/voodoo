@@ -1,0 +1,54 @@
+.product-card {
+  @apply grid relative;
+  gap: em(12, 14);
+  grid-template: auto 1fr auto / 1fr;
+
+  // .product-card__used
+
+  &__used {
+    @apply absolute;
+    z-index: 1;
+    top: em(12, 12);
+    left: em(12, 12);
+  }
+
+  // .product-card__img
+
+  &__img {
+    padding-bottom: 100%;
+
+    img {
+      @apply rounded;
+      border: rem(1) solid $mainColor;
+    }
+  }
+
+  // .product-card__text
+
+  &__text {
+    @apply flex justify-between;
+    gap: em(5, 14);
+  }
+
+  // .product-card__main
+
+  &__main {
+    @apply font-bold;
+
+    // .product-card__main_right
+
+    &_right {
+      @apply text-right font-normal;
+      min-width: em(89, 14);
+
+      h4 {
+        @apply font-medium;
+      }
+    }
+  }
+
+  // .product-card__pick-up
+
+  &__pick-up {
+  }
+}

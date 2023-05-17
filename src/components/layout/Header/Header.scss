@@ -1,0 +1,72 @@
+.header {
+  @apply fixed top-0 left-0 z-10 w-full;
+  border-bottom: em(1) solid $mainColor;
+  backdrop-filter: blur(em(5));
+
+  // .header__container
+
+  &__container {
+    @apply flex justify-between items-start;
+    @include responsiveValue("padding-top", 48, 24);
+    @include responsiveValue("padding-bottom", 48, 24);
+    @include responsiveValue("min-height", 194, 98);
+  }
+
+  // .header__logo
+
+  &__logo {
+    @apply relative;
+    z-index: 9;
+    transition: opacity 0.3s ease 0s;
+
+    @media (max-width: rem($maxWidth)) {
+      @apply flex;
+      @include responsiveValue("gap", 13, 4);
+    }
+
+    &:hover {
+      @apply opacity-50;
+    }
+  }
+
+  // .header__img
+
+  &__img {
+    @apply relative;
+
+    // .header__img_relative
+
+    &._relative {
+      @include responsiveValue("width", 192.79, 94);
+      @include responsiveValue("padding-bottom", 97.88, 48);
+    }
+
+    // .header__img_absolute
+
+    &._absolute {
+      @include responsiveValue("width", 45, 23);
+      @include responsiveValue("height", 45, 23);
+
+      @media (min-width: rem($maxWidth)) {
+        @apply absolute top-0;
+        @include responsiveValue("left", -45 - 12, -23);
+      }
+    }
+  }
+
+  // .header__buttons
+
+  &__buttons {
+    @apply flex;
+    @include responsiveValue("gap", 38, 5);
+  }
+
+  // .header__button
+
+  &__button {
+    @media (max-width: rem(339.98)) {
+      @apply whitespace-nowrap overflow-hidden text-ellipsis;
+      max-width: em(83.4);
+    }
+  }
+}
