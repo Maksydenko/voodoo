@@ -1,6 +1,6 @@
 {
   "name": "voodoo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.1.4",
-    "@types/react": "18.2.6",
+    "@types/node": "^20.2.3",
+    "@types/react": "^18.2.7",
     "@types/react-dom": "18.2.4",
     "autoprefixer": "10.4.14",
-    "next": "13.4.2",
+    "next": "^13.4.3",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
