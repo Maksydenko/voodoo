@@ -2,7 +2,8 @@
   // .alpha__container
 
   &__container {
-    @include responsiveValue("margin-bottom", 48, 50);
+    @include responsiveValue("padding-top", 48, 0);
+    @include responsiveValue("padding-bottom", 48, 50);
   }
 
   &__body {
@@ -11,7 +12,7 @@
     background-color: $mainColor;
 
     > * {
-      padding: em(25, 14);
+      padding: rem(0) rem(29) rem(0) rem(25);
     }
 
     &_active {
@@ -28,8 +29,8 @@
 
   &__button {
     @apply flex justify-between items-center w-full;
-    gap: em(5);
-    padding: em(25, 14);
+    gap: rem(5);
+    height: rem(72);
     transition: opacity 0.3s ease 0s;
 
     &:hover {
@@ -47,7 +48,7 @@
   &__title {
     @apply flex items-center text-base font-bold uppercase;
     width: em(80);
-    gap: em(7);
+    gap: em(8);
   }
 
   // .alpha__img

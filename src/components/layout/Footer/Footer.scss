@@ -2,25 +2,26 @@
 
 .footer {
   @apply bg-white;
+  border-top: rem(1) solid $mainColor;
 
   // .footer__container
 
   &__container {
     @apply flex items-start;
-    gap: em(23);
-    min-height: em(268);
-    padding-top: em(84);
-    padding-bottom: em(84);
+    gap: rem(24);
+    min-height: rem(268);
+    padding-top: rem(84);
+    padding-bottom: rem(84);
 
     @media (max-width: $tablet) {
-      @apply flex-col;
-      gap: em(48);
-      padding: em(48);
+      @apply flex-col gap-12 p-12;
     }
 
     > * {
-      @media (min-width: $tablet) {
-        flex: 1 1 em(300);
+      &:not(:first-child) {
+        @media (min-width: $tablet) {
+          flex: 0 1 rem(300);
+        }
       }
     }
   }
@@ -28,7 +29,7 @@
   // .footer__logo
 
   &__logo {
-    padding: em(8) 0;
+    padding: rem(8) rem(110) rem(8) rem(57);
 
     @media (max-width: $tablet) {
       @apply order-last self-center;
@@ -46,7 +47,7 @@
   // .footer__img
 
   &__img {
-    @apply m-auto;
+    // @apply m-auto;
     @include responsiveValue("width", 82, 80);
     @include responsiveValue("height", 82, 80);
   }

@@ -1,12 +1,12 @@
 .form {
   @apply flex justify-center font-semibold text-base;
-  gap: em(12, 14);
+  gap: rem(12);
 
   // .form__input
 
   &__input {
     @apply min-w-0 rounded;
-    flex: 0 1 em(518, 14);
+    flex: 0 1 rem(518);
 
     &::placeholder {
       color: $mainColor;
@@ -17,7 +17,7 @@
 
   &__submit {
     @apply rounded;
-    flex: 0 0 em(94, 14);
+    flex: 0 0 rem(94);
     background-color: #ed5e21;
     transition: opacity 0.3s ease 0s;
 
@@ -27,6 +27,6 @@
   }
 
   > * {
-    padding: em(9.5, 14) em(16, 14);
+    padding: rem(9.5) rem(16);
   }
 }

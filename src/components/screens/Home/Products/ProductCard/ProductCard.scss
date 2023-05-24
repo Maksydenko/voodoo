@@ -1,6 +1,6 @@
 .product-card {
   @apply grid relative;
-  gap: em(12, 14);
+  gap: rem(12);
   grid-template: auto 1fr auto / 1fr;
 
   // .product-card__used
@@ -8,8 +8,8 @@
   &__used {
     @apply absolute;
     z-index: 1;
-    top: em(12, 12);
-    left: em(12, 12);
+    top: rem(12);
+    left: rem(12);
   }
 
   // .product-card__img
@@ -27,7 +27,7 @@
 
   &__text {
     @apply flex justify-between;
-    gap: em(5, 14);
+    gap: rem(5);
   }
 
   // .product-card__main
@@ -56,7 +56,6 @@
       &::after {
         content: "";
         @apply absolute bottom-0.5 left-0 w-full;
-        position: absolute;
         height: em(1);
         background-color: $mainBg;
       }

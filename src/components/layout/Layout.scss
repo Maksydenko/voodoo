@@ -2,7 +2,7 @@
 @import "Footer/Footer.scss";
 
 main {
-  @include responsiveValue("margin-top", 194, 98);
-  @include responsiveValue("padding-top", 60, 24);
-  @include responsiveValue("padding-bottom", 26, 79);
+  @include responsiveValue("margin-top", 186, 98);
+  @include responsiveValue("padding-top", 76, 24);
+  @include responsiveValue("padding-bottom", 23, 79);
 }

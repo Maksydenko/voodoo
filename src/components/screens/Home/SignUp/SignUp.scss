@@ -12,7 +12,7 @@
   // .sign-up__title
 
   &__title {
-    margin-bottom: rem(24);
+    margin-bottom: rem(21);
     @include responsiveValue("font-size", 20, 14);
   }
 
