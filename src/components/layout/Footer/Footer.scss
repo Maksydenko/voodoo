@@ -9,9 +9,9 @@
   &__container {
     @apply flex items-start;
     gap: rem(24);
-    min-height: rem(268);
     padding-top: rem(84);
     padding-bottom: rem(84);
+    min-height: rem(268);
 
     @media (max-width: $tablet) {
       @apply flex-col gap-12 p-12;
