@@ -50,5 +50,16 @@
   // .product-card__pick-up
 
   &__pick-up {
+    span {
+      @apply relative;
+
+      &::after {
+        content: "";
+        @apply absolute bottom-0.5 left-0 w-full;
+        position: absolute;
+        height: em(1);
+        background-color: $mainBg;
+      }
+    }
   }
 }

@@ -35,7 +35,7 @@ const ProductCard: FC<IProductCardProps> = ({ product }) => {
         </div>
       </div>
       <button className="product-card__pick-up button button_big button_uppercase">
-        PICK-UP IN 2200
+        PICK-UP IN <span>2200</span>
       </button>
     </div>
   );

@@ -1,15 +1,15 @@
 .header {
   @apply fixed top-0 left-0 z-10 w-full;
   border-bottom: em(1) solid $mainColor;
-  backdrop-filter: blur(em(5));
+  background-color: $mainBg;
 
   // .header__container
 
   &__container {
     @apply flex justify-between items-start;
     @include responsiveValue("padding-top", 48, 24);
-    @include responsiveValue("padding-bottom", 48, 24);
-    @include responsiveValue("min-height", 194, 98);
+    @include responsiveValue("padding-bottom", 39, 24);
+    @include responsiveValue("min-height", 185, 97);
   }
 
   // .header__logo
@@ -49,7 +49,7 @@
 
       @media (min-width: rem($maxWidth)) {
         @apply absolute top-0;
-        @include responsiveValue("left", -45 - 12, -23);
+        @include responsiveValue("left", -45 - 12, -23 - 12);
       }
     }
   }

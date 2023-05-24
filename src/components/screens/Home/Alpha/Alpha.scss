@@ -15,6 +15,9 @@
     }
 
     &_active {
+      .alpha__img._arrow {
+        @apply rotate-180;
+      }
       .alpha__content {
         @apply block;
       }
@@ -47,9 +50,13 @@
     gap: em(7);
   }
 
+  // .alpha__img
+
   &__img {
     flex: 0 0 em(22);
     padding-bottom: em(22);
+
+    // .alpha__img._arrow
 
     &._arrow {
       @apply pb-2;
