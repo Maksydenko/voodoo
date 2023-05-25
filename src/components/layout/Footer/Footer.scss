@@ -32,7 +32,7 @@
     padding: rem(8) rem(110) rem(8) rem(57);
 
     @media (max-width: $tablet) {
-      @apply order-last self-center;
+      @apply order-last self-center px-0;
     }
 
     a {
