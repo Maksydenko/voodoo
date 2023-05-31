@@ -44,7 +44,7 @@ const Alpha: FC = () => {
             </div>
             <Img className="_arrow alpha" img={arrowIcon} />
           </button>
-          <Content />
+          {isActive && <Content />}
         </div>
       </div>
     </section>

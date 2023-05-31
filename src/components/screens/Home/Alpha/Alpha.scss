@@ -19,9 +19,6 @@
       .alpha__img._arrow {
         @apply rotate-180;
       }
-      .alpha__content {
-        @apply block;
-      }
     }
   }
 
@@ -80,7 +77,6 @@
   // .alpha__content
 
   &__content {
-    @apply hidden;
     border-top: rem(1) solid $mainBg;
 
     p {
