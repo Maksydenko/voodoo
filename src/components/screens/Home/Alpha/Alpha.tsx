@@ -1,12 +1,9 @@
 import { FC, useState } from "react";
 
-import Img from "@/components/base/Img/Img";
+import Button from "./Button";
 import Content from "./Content";
 
 import { getModifierClassName } from "@/utils/className.util";
-
-import arrow from "@/assets/img/arrow.svg";
-import important from "@/assets/img/important.svg";
 
 const Alpha: FC = () => {
   const [isActive, setIsActive] = useState(false);
@@ -17,31 +14,11 @@ const Alpha: FC = () => {
   }
   const handleClick: IHandleCLick = () => setIsActive(!isActive);
 
-  const importantIcon = {
-    src: important,
-    alt: "!",
-  };
-  const arrowIcon = {
-    src: arrow,
-    alt: "v",
-  };
-
   return (
     <section className="alpha">
       <div className="alpha__container">
         <div className={getModifierClassName(isActive, "alpha__body")}>
-          <button className="alpha__button" onClick={handleClick}>
-            <div className="alpha__main">
-              <div className="alpha__title">
-                <Img className="alpha" img={importantIcon} />
-                <h3>ALPHA</h3>
-              </div>
-              <p className="alpha__text">
-                Important info<span> regarding our service</span>
-              </p>
-            </div>
-            <Img className="_arrow alpha" img={arrowIcon} />
-          </button>
+          <Button onClick={handleClick} />
           {isActive && <Content />}
         </div>
       </div>

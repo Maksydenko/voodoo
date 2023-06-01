@@ -8,7 +8,7 @@ interface ImgProps {
   img: IImg;
   width?: number;
   height?: number;
-  defaultStyle?: boolean;
+  resetStyle?: boolean;
 }
 
 const Img: FC<ImgProps> = ({
@@ -16,9 +16,9 @@ const Img: FC<ImgProps> = ({
   img: { src, alt },
   width = 0,
   height = 0,
-  defaultStyle = true,
+  resetStyle,
 }) => (
-  <div className={`${className}__img${defaultStyle ? " img" : ""}`}>
+  <div className={`${className}__img${resetStyle ? "" : " img"}`}>
     <Image src={src} alt={alt} width={width} height={height} />
   </div>
 );
