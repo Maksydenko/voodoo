@@ -16,18 +16,14 @@ interface ImgProps {
 
 const Img: FC<ImgProps> = ({
   className,
-  img,
+  img: { src, alt },
   width = 0,
   height = 0,
   defaultStyle = true,
-}) => {
-  const { src, alt } = img;
-
-  return (
-    <div className={`${className}__img${defaultStyle ? " img" : ""}`}>
-      <Image src={src} alt={alt} width={width} height={height} />
-    </div>
-  );
-};
+}) => (
+  <div className={`${className}__img${defaultStyle ? " img" : ""}`}>
+    <Image src={src} alt={alt} width={width} height={height} />
+  </div>
+);
 
 export default Img;
