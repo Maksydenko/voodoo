@@ -5,8 +5,6 @@ import Content from "./Content";
 
 import { getModifierClassName } from "@/utils/className.util";
 
-import { IImg } from "@/interfaces/img.interface";
-
 import arrow from "@/assets/img/arrow.svg";
 import important from "@/assets/img/important.svg";
 
@@ -19,11 +17,11 @@ const Alpha: FC = () => {
   }
   const handleClick: IHandleCLick = () => setIsActive(!isActive);
 
-  const importantIcon: IImg = {
+  const importantIcon = {
     src: important,
     alt: "!",
   };
-  const arrowIcon: IImg = {
+  const arrowIcon = {
     src: arrow,
     alt: "v",
   };

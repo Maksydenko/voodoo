@@ -2,11 +2,11 @@ import { FC } from "react";
 import Link from "next/link";
 import { ILink } from "../link.interface";
 
-interface IItemProps {
+interface ItemProps {
   link: ILink;
 }
 
-const Item: FC<IItemProps> = ({ link }) => {
+const Item: FC<ItemProps> = ({ link }) => {
   const { value, href } = link;
 
   return (

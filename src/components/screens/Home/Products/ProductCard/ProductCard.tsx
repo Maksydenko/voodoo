@@ -2,18 +2,17 @@ import { FC } from "react";
 
 import Img from "@/components/base/Img/Img";
 import { IProduct } from "@/interfaces/products.interface";
-import { IImg } from "@/interfaces/img.interface";
 
-interface IProductCardProps {
+interface ProductCardProps {
   product: IProduct;
 }
 
-const ProductCard: FC<IProductCardProps> = ({ product }) => {
+const ProductCard: FC<ProductCardProps> = ({ product }) => {
   const title = product.title;
   const price = product.variants[0].price;
   const image = product.images[0].src;
 
-  const img: IImg = {
+  const img = {
     src: image,
     alt: title,
   };

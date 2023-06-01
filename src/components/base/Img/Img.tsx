@@ -2,17 +2,19 @@ import { FC } from "react";
 import Image from "next/image";
 
 interface IImg {
+  src: string;
+  alt: string;
+}
+
+interface ImgProps {
   className: string;
-  img: {
-    src: any;
-    alt: string;
-  };
+  img: IImg;
   width?: number;
   height?: number;
   defaultStyle?: boolean;
 }
 
-const Img: FC<IImg> = ({
+const Img: FC<ImgProps> = ({
   className,
   img,
   width = 0,
