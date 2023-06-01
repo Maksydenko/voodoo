@@ -1,10 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-interface IImg {
-  src: string;
-  alt: string;
-}
+import { IImg } from "@/interfaces/img.interface";
 
 interface ImgProps {
   className: string;
