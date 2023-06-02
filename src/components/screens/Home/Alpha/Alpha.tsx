@@ -3,7 +3,7 @@ import { FC, useState } from "react";
 import Button from "./Button";
 import Content from "./Content";
 
-import { getModifierClassName } from "@/utils/className.util";
+import { handleClassName } from "@/utils/className.util";
 
 const Alpha: FC = () => {
   const [isActive, setIsActive] = useState(false);
@@ -17,7 +17,7 @@ const Alpha: FC = () => {
   return (
     <section className="alpha">
       <div className="alpha__container">
-        <div className={getModifierClassName(isActive, "alpha__body")}>
+        <div className={handleClassName(isActive, "alpha__body")}>
           <Button onClick={handleClick} />
           {isActive && <Content />}
         </div>
