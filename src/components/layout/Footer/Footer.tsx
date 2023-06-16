@@ -4,6 +4,8 @@ import Link from "next/link";
 import Img from "@/components/base/Img/Img";
 import LinkList from "./LinkList/LinkList";
 
+import { links } from "./links/links.const";
+
 import { Space_Mono } from "next/font/google";
 
 const spaceMono = Space_Mono({
@@ -17,23 +19,9 @@ const Footer: FC = () => {
     alt: "v",
   };
 
-  const links1 = [
-    { value: "FAQ", href: "" },
-    { value: "RETURNS", href: "" },
-    { value: "CONTACT", href: "" },
-  ];
-  const links2 = [
-    { value: "TERMS & CONDITIONS", href: "" },
-    { value: "PRIVACY POLICY", href: "" },
-    { value: "COOKIE POLICY", href: "" },
-    { value: "COOKIE SETTINGS", href: "" },
-  ];
-  const links3 = [
-    { value: "ABOUT SECOND CHANCE", href: "" },
-    { value: "CAREER", href: "" },
-    { value: "FACEBOOK", href: "" },
-    { value: "INSTAGRAM", href: "" },
-  ];
+  const items = links.map((groupLinks) => (
+    <LinkList key={groupLinks[0].value} links={groupLinks} />
+  ));
 
   return (
     <footer className={`footer ${spaceMono.className}`}>
@@ -43,9 +31,7 @@ const Footer: FC = () => {
             <Img className="footer" img={subLogo} />
           </Link>
         </div>
-        <LinkList links={links1} />
-        <LinkList links={links2} />
-        <LinkList links={links3} />
+        {items}
       </div>
     </footer>
   );

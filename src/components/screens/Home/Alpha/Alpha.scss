@@ -6,6 +6,8 @@
     @include responsiveValue("padding-bottom", 48, 50);
   }
 
+  // .alpha__body
+
   &__body {
     @apply rounded;
     color: $mainBg;
@@ -15,8 +17,10 @@
       padding: rem(25) rem(29) rem(25) rem(25);
     }
 
+    // .alpha__body_active
+
     &_active {
-      .alpha__img._arrow {
+      .alpha__img_arrow {
         @apply rotate-180;
       }
     }
@@ -35,12 +39,14 @@
     }
   }
 
-  // .alpha__warning
+  // .alpha__main
 
   &__main {
     @apply flex items-center;
     @include responsiveValue("gap", 48, 24);
   }
+
+  // .alpha__title
 
   &__title {
     @apply flex items-center text-base font-bold uppercase;
@@ -54,9 +60,9 @@
     flex: 0 0 em(22);
     padding-bottom: em(22);
 
-    // .alpha__img._arrow
+    // .alpha__img_arrow
 
-    &._arrow {
+    &_arrow {
       @apply pb-2;
       flex: 0 0 rem(14);
     }

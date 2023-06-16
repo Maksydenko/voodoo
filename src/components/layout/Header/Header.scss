@@ -40,14 +40,14 @@
 
     // .header__img_relative
 
-    &._relative {
+    &_relative {
       @include responsiveValue("width", 192.79, 94);
       @include responsiveValue("padding-bottom", 97.88, 48);
     }
 
     // .header__img_absolute
 
-    &._absolute {
+    &_absolute {
       @include responsiveValue("width", 45, 23);
       @include responsiveValue("height", 45, 23);
 

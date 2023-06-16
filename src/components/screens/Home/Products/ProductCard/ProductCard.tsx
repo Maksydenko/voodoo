@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 import Img from "@/components/base/Img/Img";
+
 import { IProduct } from "@/interfaces/products.interface";
 
 interface ProductCardProps {

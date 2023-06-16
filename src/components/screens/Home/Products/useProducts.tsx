@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 import { fetchProductsData } from "@/services/productsApi";
+
 import { IProducts } from "@/interfaces/products.interface";
 
 interface IUseProducts {

@@ -18,8 +18,8 @@ const Header: FC = () => {
     <header className="header">
       <div className="header__container">
         <Link href="/" className="header__logo">
-          <Img className="_absolute header" img={subLogo} />
-          <Img className="_relative header" img={logo} />
+          <Img className="header" modifier="absolute" img={subLogo} />
+          <Img className="header" modifier="relative" img={logo} />
         </Link>
         <div className="header__buttons">
           <Link href="" className="header__button button button_transparent">

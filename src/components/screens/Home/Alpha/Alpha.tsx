@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 
-import Button from "./Button";
-import Content from "./Content";
+import Button from "./Items/Button";
+import Content from "./Items/Content";
 
 import { handleClassName } from "@/utils/className.util";
 

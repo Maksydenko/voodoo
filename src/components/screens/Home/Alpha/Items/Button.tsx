@@ -30,7 +30,7 @@ const Button: FC<ButtonProps> = ({ onClick }) => {
           Important info<span> regarding our service</span>
         </p>
       </div>
-      <Img className="_arrow alpha" img={arrowIcon} />
+      <Img className="alpha" modifier="arrow" img={arrowIcon} />
     </button>
   );
 };
