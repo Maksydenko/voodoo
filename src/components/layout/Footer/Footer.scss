@@ -47,7 +47,6 @@
   // .footer__img
 
   &__img {
-    // @apply m-auto;
     @include responsiveValue("width", 82, 80);
     @include responsiveValue("height", 82, 80);
   }

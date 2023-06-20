@@ -10,8 +10,7 @@
   // .products__body
 
   &__body {
-    @apply grid justify-center;
-    gap: rem(48) rem(24);
+    @apply grid justify-center gap-x-6 gap-y-12;
     grid-template-columns: repeat(auto-fill, minmax(rem(272), 1fr));
     grid-auto-rows: 1fr;
   }
