@@ -111,7 +111,7 @@ body {
 } @else {
   // According to breakpoints
   [class*="__container"] {
-    @apply m-auto;
+    @apply mx-auto;
 
     @if $maxWidthContainer > 0 {
       max-width: rem($containerWidth);

@@ -1,6 +1,5 @@
 .form {
-  @apply flex justify-center font-semibold text-base;
-  gap: rem(12);
+  @apply flex justify-center gap-3 font-semibold text-base;
 
   // .form__input
 
