@@ -90,7 +90,7 @@ body {
   // Responsive
   [class*="__container"] {
     @if $maxWidthContainer > 0 {
-      @apply m-auto;
+      @apply mx-auto;
       max-width: rem($containerWidth);
     }
 
