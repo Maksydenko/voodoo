@@ -28,7 +28,7 @@ const Footer: FC = () => {
       <div className="footer__container">
         <div className="footer__logo">
           <Link href="/">
-            <Img className="footer" img={subLogo} />
+            <Img className="footer" img={subLogo} priority />
           </Link>
         </div>
         {items}
