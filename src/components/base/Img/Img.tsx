@@ -11,6 +11,8 @@ interface ImgProps {
   img: IImg;
   style?: { [property: string]: string };
   resetStyle?: boolean;
+  priority?: boolean;
+  quality?: number;
   width?: number;
   height?: number;
 }
@@ -21,6 +23,8 @@ const Img: FC<ImgProps> = ({
   img: { src, alt },
   style,
   resetStyle,
+  priority,
+  quality = 75,
   width = 0,
   height = 0,
 }) => {
@@ -33,7 +37,14 @@ const Img: FC<ImgProps> = ({
 
   return (
     <div className={modifiedClassName + defaultClassName} style={style}>
-      <Image src={src} alt={alt} width={width} height={height} />
+      <Image
+        src={src}
+        alt={alt}
+        priority={priority}
+        quality={quality}
+        width={width}
+        height={height}
+      />
     </div>
   );
 };
