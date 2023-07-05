@@ -1,18 +1,22 @@
 import { FC } from "react";
 import ProductCard from "./ProductCard/ProductCard";
 
+import { useFetchData } from "@/hooks/useFetchData";
+
 import { IProduct } from "@/interfaces/products.interface";
-import { useProducts } from "./useProducts";
 
 const Products: FC = () => {
-  const products = useProducts();
+  const { data } = useFetchData(
+    "https://voodoo-sandbox.myshopify.com/products.json?limit=12"
+  );
+  const products = data?.products;
 
   return (
     <section className="products">
       <div className="products__container">
         <div className="products__body">
-          {Array.isArray(products?.products) &&
-            products?.products.map((product: IProduct) => (
+          {products &&
+            products.map((product: IProduct) => (
               <ProductCard key={product.id} product={product} />
             ))}
         </div>
